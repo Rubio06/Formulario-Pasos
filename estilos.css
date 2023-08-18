@@ -1,0 +1,207 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto',sans-serif; 
+    background: black;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    height: 100vh;
+}
+.cont-general{
+    width: 25%; border-radius: 10px; background: rgb(181, 182, 184);
+}
+.formulario__pasos{
+    width: 100%;
+    padding: 0px 35px 35px 35px;
+    display: flex;
+    overflow: hidden;
+}
+.formulario{
+    min-width: 100%;
+    transition: all .2s linear;
+    opacity: 0;
+}
+.activa{
+    opacity: 1;
+}
+.inactiva{
+    opacity: 0;
+}
+.derecha{
+    margin-left: -100%;
+}
+.formulario__1.inactivo{
+    animation-name: scale;
+    animation-duration: .2s;
+    animation-direction: alternate;
+    animation-iteration-count: 2;
+}
+@keyframes scale{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.1);
+
+    }
+}
+
+/* ////// */
+.form__register-bar{
+    width: 100%;
+}
+.progres__bar{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: space-between;
+    list-style: none;
+    /* sirve para resetar en 0 */
+    counter-reset: step;
+}
+.progres__bar-option{
+    /* border: 3px solid black; */
+    height: 35px;
+    font-weight: bold;
+    position: relative;
+    /* background: rgba(2, 5, 29, 0.658); */
+}
+.progres__bar-option:before{
+    display: flex;
+    width: 30px;
+    height: 30px;
+    /* sirve para  llamar a la funcion counter*/
+    content: counter(step);
+    /* incrementa el counter */
+    counter-increment: step;
+    margin: 0 auto 5px;
+    background: wheat;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+.progres__bar-option::after{
+    display: block;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: wheat;
+    position: absolute;
+    top: 14px;
+    left: -95%;
+    z-index: 1;
+}
+.progres__bar-option:first-child::after{
+    content: none;
+}
+.progres__bar-option.color__bar::before, 
+.progres__bar-option.color__bar::after{
+    background: rgb(2, 5, 29);
+    color: white;
+}
+
+.btn__fomulario{
+    width: 95%;
+    margin: auto;
+}
+.btn__fomulario button{
+    width: 100%;
+    padding: 7px;
+    font-weight: bold;
+    font-family: 'Roboto',sans-serif; 
+    font-size: 15px;
+}
+.btn__fomulario2{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.btn__fomulario2 button{
+    width: 48%;
+    font-size: 15px;
+    padding: 7px;
+    font-weight: bold;
+    font-family: 'Roboto',sans-serif; 
+} 
+
+/* ////// */
+
+.form__datos{
+    margin-bottom: 5px;
+}
+.form__datos div input{
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: none;
+    border: 3px solid white;
+}
+.validacion{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    position: relative;
+    align-items: center;
+    border-radius: 5px;
+}
+.validacion input{
+    width: 100%;
+    padding: 10px;
+    outline: none;    
+    border: none;
+}
+.backgroun-blacn{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 12%;
+    text-align: center;
+    background: white;
+}
+.fa-circle-exclamation{
+    color: #bb2929;
+    background: white;
+
+}
+.fa-circle-check{
+    color:rgb(31, 165, 31);
+    background: white;
+}
+#respuesta__nombre ,#respuesta__apellido,#respuesta__edad,
+#respuesta__direccion,#respuesta__numero,#respuesta__correo,
+#respuesta__sexo,#respuesta__dni,#respuesta__estatura,#respuesta__usuario,#respuesta__password,#respuesta__password2{
+    color: #bb2929;
+    font-size: 11px;
+    padding: 5px;
+    height: 23px;
+}
+.desaparecer__respuesta{
+    display: none;
+}
+.aparecer__respuesta{
+    display: block;
+}
+
+@media screen and (min-width: 200px) and (max-width: 499px){
+    .cont-general{
+        width: 100%;
+        max-width: 315px;
+    }
+}
+@media screen and (min-width: 500px) and (max-width: 1500px){
+    .cont-general{
+        width: 100%;
+        max-width: 315px;
+    }
+}
+
