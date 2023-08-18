@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="https://kit.fontawesome.com/2356e8f8d0.js" crossorigin="anonymous"></script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- data-step 1: en que formulario nos encontramos
+         data-to_step: a que formulario queremos ir -->
+    <div class="container">
+        <div class="cont-general">
+            <h1 style="text-align: center; padding: 10px;">Formulario de pasos</h1>
+            <div class="form__register-bar">
+                <ul class="progres__bar">
+                    <li class="progres__bar-option color__bar">Paso 1</li>
+                    <li class="progres__bar-option">Paso 2</li>
+                    <li class="progres__bar-option">Paso 3</li>
+                    <li class="progres__bar-option">Paso 4</li>
+                </ul>
+            </div><br>
+            <h3 style="padding:5px; background: rgb(199, 202, 211); margin: 10px 10px;"><p style="width: 90%;">Llenar formulario</p></h3>
+            <div class="formulario__pasos" id="formulario__pasos">
+                <!-- formulario1 -->
+                <div class="formulario activa" id="step-1">
+                    <div style="padding: 15px; margin: auto; background: rgb(197, 201, 197); border-radius: 5px;">
+                        <div class="comp__datos">
+                            <label for="nombre" class="label__nombre"><b>Nombre*</b></label>
+                            <div class="input__validacion-nombre validacion" style="margin-top: 5px;">
+                                <input type="text" name="nombre" id="nombre" class="nombre" autocomplete="off"
+                                    placeholder="Ingrese su nombre">
+                                <div class="backgroun-blacn">
+                                    <i class="i__nombre fa-solid "></i>
+                                </div>
+                            </div>
+                            <div id="respuesta__nombre"></div>
+                        </div>
+                        <div class="comp__datos">
+                            <label for="apellido" class="label__apellido"><b>Apellido*</b></label>
+                            <div class="input__validacion-apellido validacion" style="margin-top: 5px;">
+                                <input type="text" name="apellido" id="apellido" class="apellido" autocomplete="off"
+                                    placeholder="Ingrese su apellido">
+                                <div class="backgroun-blacn">
+                                    <i class="i__apellido fa-solid "></i>
+                                </div>
+                            </div>
+                            <div id="respuesta__apellido"></div>
+                        </div>
+                        <div class="comp__datos">
+                            <label for="edad" class="label__edad"><b>Edad*</b></label>
+                            <div class="input__validacion-edad validacion" style="margin-top: 5px;">
+                                <input type="number" name="edad" id="edad" class="edad" autocomplete="off"
+                                    placeholder="Ingrese su edad">
+                                <div class="backgroun-blacn">
+                                    <i class="i__edad fa-solid "></i>
+                                </div>
+                            </div>
+                            <div id="respuesta__edad"></div>
+                        </div>
+                    </div>
+                    <marquee style="padding-bottom: 10px; color: rgb(13, 5, 34);">
+                        --------------------------------------------------------------                        
+                    </marquee>
+                    <div class="btn__fomulario">
+                        <button class="btn__siguiente" data-step="1" data-to_step="2">Siguiente</button>
+                    </div>
+                </div>
+                <!-- formulario2 -->
+                <div class="formulario" id="step-2">
+                    <div style="padding: 15px; margin: auto; background: rgb(197, 201, 197); border-radius: 5px;">
+                    <div class="comp__datos">
+                        <label for="direccion" class="label__direccion"><b>Dirección*</b></label>
+                        <div class="input__validacion-direccion validacion" style="margin-top: 5px;">
+                            <input type="text" name="direccion" id="direccion" class="direccion" autocomplete="off"
+                                placeholder="Ingrese su dirección">
+                            <div class="backgroun-blacn">
+                                <i class="i__direccion fa-solid "></i>
+                            </div>
+                        </div>
+                        <div id="respuesta__direccion"></div>
+                    </div>
+                    <div class="comp__datos">
+                        <label for="numero" class="label__numero"><b>Numero telefonico*</b></label>
+                        <div class="input__validacion-numero validacion" style="margin-top: 5px;">
+                            <input type="number" name="numero" id="numero" class="numero" autocomplete="off"
+                                placeholder="Ingrese su numero">
+                            <div class="backgroun-blacn">
+                                <i class="i__numero fa-solid "></i>
+                            </div>
+                        </div>
+                        <div id="respuesta__numero"></div>
+                    </div>
+                    <div class="comp__datos">
+                        <label for="correo" class="label__correo"><b>Correo*</b></label>
+                        <div class="input__validacion-correo validacion" style="margin-top: 5px;">
+                            <input type="email" name="correo" id="correo" class="correo" autocomplete="off"
+                                placeholder="Ingrese su correo">
+                            <div class="backgroun-blacn">
+                                <i class="i__correo fa-solid "></i>
+                            </div>
+                        </div>
+                        <div id="respuesta__correo"></div>
+                    </div>
+                    </div>
+                    <marquee style="padding-bottom: 10px; color: rgb(13, 5, 34);">
+                        --------------------------------------------------------------                        
+                    </marquee>
+                    <div class="btn__fomulario2">
+                        <button class="btn__anterior" data-step="2" data-to_step="1">Anterior</button>
+                        <button class="btn__siguiente" data-step="2" data-to_step="3">Siguiente</button>
+                    </div>
+                </div>
+                <!-- formulario3 -->
+                <div class="formulario" id="step-3">
+                    <div style="padding: 15px; margin: auto; background: rgb(197, 201, 197); border-radius: 5px;">
+
+                    <div class="comp__datos">
+                        <label for="sexo" class="label__sexo"><b>Sexo*</b></label>
+                        <div class="input__validacion-sexo validacion" style="margin-top: 5px;">
+                            <input type="text" name="sexo" id="sexo" class="sexo" autocomplete="off"
+                                placeholder="Ingrese su sexo">
+                            <div class="backgroun-blacn">
+                                <i class="i__sexo fa-solid "></i>
+                            </div>
+                        </div>
+                        <div id="respuesta__sexo"></div>
+                    </div>
+                    <div class="comp__datos">
+                        <label for="dni" class="label__dni"><b>Dni*</b></label>
+                        <div class="input__validacion-dni validacion" style="margin-top: 5px;">
+                            <input type="number" name="dni" id="dni" class="dni" autocomplete="off"
+                                placeholder="Ingrese su DNI">
+                            <div class="backgroun-blacn">
+                                <i class="i__dni fa-solid "></i>
+                            </div>
+                        </div>
+                        <div id="respuesta__dni"></div>
+                    </div>
+                    <div class="comp__datos">
+                        <label for="estatura" class="label__estatura"><b>Estatura*</b></label>
+                        <div class="input__validacion-estatura validacion" style="margin-top: 5px;">
+                            <input type="text" name="estatura" id="estatura" class="estatura" autocomplete="off"
+                                placeholder="Ingrese su estatura">
+                            <div class="backgroun-blacn">
+                                <i class="i__estatura fa-solid "></i>
+                            </div>
+                        </div>
+                        <div id="respuesta__estatura"></div>
+                    </div>
+
+                    </div>
+                    <marquee style="padding-bottom: 10px; color: rgb(13, 5, 34);">
+                        --------------------------------------------------------------                        
+                    </marquee>
+                    <div class="btn__fomulario2">
+                        <button class="btn__anterior" data-step="3" data-to_step="2">Anterior</button>
+                        <button class="btn__siguiente" data-step="3" data-to_step="4">Siguiente</button>
+                    </div>
+                </div>
+                <!-- formulario4 -->
+                <div class="formulario" id="step-4">
+                    <div style="padding: 15px; margin: auto; background: rgb(197, 201, 197); border-radius: 5px;">
+                    <div class="comp__datos">
+                        <label for="usuario" class="label__usuario"><b>Usuario*</b></label>
+                        <div class="input__validacion-usuario validacion" style="margin-top: 5px;">
+                            <input type="text" name="usuario" id="usuario" class="usuario" autocomplete="off"
+                                placeholder="Ingrese un usuario">
+                            <div class="backgroun-blacn">
+                                <i class="i__usuario fa-solid "></i>
+                            </div>
+                        </div>
+                        <div id="respuesta__usuario"></div>
+                    </div>
+                    <div class="comp__datos">
+                        <label for="password" class="label__password"><b>Contraseña*</b></label>
+                        <div class="input__validacion-password validacion" style="margin-top: 5px;">
+                            <input type="password" name="password" id="password" class="password" autocomplete="off"
+                                placeholder="Ingrese su contraseña">
+                            <div class="backgroun-blacn">
+                                <i class="i__password fa-solid "></i>
+                            </div>
+                        </div>
+                        <div id="respuesta__password"></div>
+                    </div>
+                    <div class="comp__datos">
+                        <label for="password2" class="label__password2"><b>Repetir contraseña*</b></label>
+                        <div class="input__validacion-password2 validacion" style="margin-top: 5px;">
+                            <input type="password" name="password2" id="password2" class="password2" autocomplete="off"
+                                placeholder="Repetir contraseña">
+                            <div class="backgroun-blacn">
+                                <i class="i__password2 fa-solid "></i>
+                            </div>
+                        </div>
+                        <div id="respuesta__password2"></div>
+                    </div>
+                    </div>
+                    <marquee style="padding-bottom: 10px; color: rgb(13, 5, 34);">
+                        --------------------------------------------------------------                        
+                    </marquee>
+                    <div class="btn__fomulario2">
+                        <button class="btn__anterior" data-to_step="3" data-step="4">Anterior</button>
+                        <button id="registrarDatos">Registrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
